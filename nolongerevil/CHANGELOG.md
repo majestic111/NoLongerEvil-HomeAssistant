@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0] - Mar 31, 2026
+
+### Network Scanner and Device Credentials
+
+Added local network scanning to discover and configure Nest devices from the dashboard, and surface each device's `api_key` for local API access.
+
+### Added
+
+- **Network Scanner**: scan your local /24 subnet from the dashboard to discover unconfigured Nest devices and automatically configure them to your HA add-on in one click
+- **Device Credentials**: each thermostat's `api_key` is now captured from Basic Auth on first connection and displayed in the dashboard, making local API configuration straightforward
+- **`require_device_pairing` option**: control whether devices must complete entry key pairing before transport access (default: false)
+- **`panel_title` config**: customizable ingress panel title ("NLE Thermostats")
+
+---
+
+## [0.1.0] - Dec 11, 2025
+
+### Frontend Consolidation
+
+Migrated backend server from Node.js/TypeScript to Python for improved maintainability and performance.
+Eliminated the Node.js frontend entirely by consolidating all functionality into the Python server.
+
+### Changed
+
+- Web UI now served directly from Python server on port 8082
+- Removed Node.js/npm from Docker image
+- MQTT and user initialization moved to Python server startup
+
+### Removed
+
+- Entire `frontend/` directory
+- Node.js runtime dependency
+
+### Added
+
+- Health check endpoint at `/health`
+
+### Technical Details
+
+- Web UI served via aiohttp from `routes/control/templates/index.html`
+- Ingress path injected via `data-ingress-path` attribute on body tag
+
 ## [0.0.7] - Dec 6, 2025
 
 ### Device Availability Tracking and MQTT State Management Improvements

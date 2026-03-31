@@ -67,7 +67,13 @@ Enable verbose logging for troubleshooting device communication issues. Logs are
 - Entry keys expire after `entry_key_ttl_seconds` (default 1 hour)
 - Generate a new entry key and try again
 
+## Protocol Reference
+
+For a deep dive into how Nest thermostats communicate with the server (entry/transport/ping endpoints, long-polling subscribe cycle, PUT payloads, and WoWLAN wake mechanism), see the community-maintained protocol documentation:
+
+- [Nest Cloud Protocol Reference](https://github.com/cjserio/nest-thermostat-protocol-docs/blob/main/NEST_CLOUD_PROTOCOL_REFERENCE.md)
+
 ## Support
 
 - [GitHub Issues](https://github.com/codykociemba/NoLongerEvil-HomeAssistant/issues)
-- [Discord](https://discord.gg/nolongerevil) - `#nle-home-assistant` channel
+- [Discord](https://discord.gg/hackhouse) - `#nle-home-assistant` channel
