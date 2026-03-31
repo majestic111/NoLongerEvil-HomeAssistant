@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0] - Mar 31, 2026
+
+### Network Scanner and Device Credentials
+
+Added local network scanning to discover and configure Nest devices from the dashboard, and surface each device's `api_key` for local API access.
+
+### Added
+
+- **Network Scanner**: scan your local /24 subnet from the dashboard to discover unconfigured Nest devices and automatically configure them to your HA add-on in one click
+- **Device Credentials**: each thermostat's `api_key` is now captured from Basic Auth on first connection and displayed in the dashboard, making local API configuration straightforward
+- **`require_device_pairing` option**: control whether devices must complete entry key pairing before transport access (default: false)
+- **`panel_title` config**: customizable ingress panel title ("NLE Thermostats")
+
+---
+
 ## [0.1.0] - Dec 11, 2025
 
 ### Frontend Consolidation
